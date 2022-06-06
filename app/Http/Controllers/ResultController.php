@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+
 
 class ResultController extends Controller
 {
-    public function currentLocation(Request $request, Post $post)
+    public function currentLocation(Request $request)
     {
         $lat = $request->lat;
         $lng = $request->lng;
@@ -17,7 +17,6 @@ class ResultController extends Controller
             'lat' => $lat,
             // 現在地経度lngをbladeへ渡す
             'lng' => $lng,
-            'posts' => $post->getPaginateByLimit()
         ]);
     }
 }

@@ -2,13 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Blog</title>
+        <title>Ra(in)Commend</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel='stylesheet' href='{{ asset("css/index.css") }}' type='text/css'>
     </head>
     <body>
-        <h1>レバテックチーム開発</h1>
+        <h1>レインコメンド</h1>
         
         <div id="map" style="height:500px; width:500px">
 	    </div>
@@ -35,4 +35,5 @@
         <script src="{{ asset('/js/result.js') }}"></script>
 	    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key={{config('services.googlemap.apikey')}}&callback=initMap" async defer>
 	   </script>
+	</body>
 </html>

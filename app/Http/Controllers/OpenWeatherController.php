@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
-use App\Post;
+
 
 class OpenWeatherController extends Controller
 {
-        public function weatherData(Request $request, Post $post) {
+        public function weatherData(Request $request) {
         $API_KEY = config('services.openweathermap.key');
         $base_url = config('services.openweathermap.url');
         $city = 'Tokyo';
@@ -32,12 +32,12 @@ class OpenWeatherController extends Controller
         
          return view('posts/show', [
                 'weather' => $weather_data, 
-                'posts' => $post->getPaginateByLimit(),]
+                ]
         );
         }
         
         
-        public function londonData(Request $request, Post $post) {
+        public function londonData(Request $request) {
         $API_KEY = config('services.openweathermap.key');
         $base_url = config('services.openweathermap.url');
 
@@ -53,11 +53,11 @@ class OpenWeatherController extends Controller
         
         return view('posts/show', [
                 'weather' => $weather_data, 
-                'posts' => $post->getPaginateByLimit(),]
+                ]
         );
         }
         
-        public function namibuData(Request $request, Post $post) {
+        public function namibuData(Request $request) {
         $API_KEY = config('services.openweathermap.key');
         $base_url = config('services.openweathermap.url');
 
@@ -73,12 +73,12 @@ class OpenWeatherController extends Controller
         
         return view('posts/show', [
                 'weather' => $weather_data, 
-                'posts' => $post->getPaginateByLimit(),]
+                ]
         );
         
     }
     
-     public function makkoData(Request $request, Post $post) {
+     public function makkoData(Request $request) {
         $API_KEY = config('services.openweathermap.key');
         $base_url = config('services.openweathermap.url');
 
@@ -94,7 +94,7 @@ class OpenWeatherController extends Controller
         
         return view('posts/show', [
                 'weather' => $weather_data, 
-                'posts' => $post->getPaginateByLimit(),]
+                ]
         );
         
     }

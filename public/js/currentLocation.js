@@ -3,7 +3,7 @@ function initMap() {
     latlng = new google.maps.LatLng(lat, lng);
     map = document.getElementById("map");
     opt = {
-        zoom: 14,
+        zoom: 15,
         center: latlng,
     };
     // google map 表示
